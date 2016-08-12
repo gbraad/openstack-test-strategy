@@ -1,0 +1,13 @@
+image: registry.gitlab.com/gbraad/docugen:latest
+
+pages:
+  script:
+  - pandoc -t html5 --template template/reveal-slides-template.html --standalone --section-divs -o index.html test-strategy.md
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
