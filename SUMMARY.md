@@ -1,3 +1,3 @@
 # Summary
 
-  * [Test Strategy](test-strategy,md)
+  * [Test Strategy](test-strategy.md)
